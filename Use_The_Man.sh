@@ -4,8 +4,7 @@
 ls -S
 
 #1.a
-biggest_file=$(ls -S /etc | head -n 1)
-cat "/etc/$biggest_file"
+cat "/etc/$(ls -S /etc | head -n 1)"
 
 #1.b
 echo " 1.b I used cat :)"
@@ -14,8 +13,7 @@ echo " 1.b I used cat :)"
 ls -Sr # -S sort by biggest size and -r reverse the sort order
 
 #2.a
-smallest_file=$(ls -Sr /etc | head -n 1)
-cat "/etc/$smallest_file"
+cat "/etc/$(ls -Sr /etc | head -n 1)"
 
 #3
 mkdir -p  grandpa/father/son
@@ -24,8 +22,7 @@ mkdir -p  grandpa/father/son
 num1=11
 num2=12
 echo -n "$num1 * $num2 = " #-n removes the \n
-result=$(expr "$num1" \* "$num2")
-echo $result
+echo $(expr "$num1" \* "$num2")
 
 #5
 echo "the function i used didnt print .Copyright info"

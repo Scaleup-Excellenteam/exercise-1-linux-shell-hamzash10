@@ -16,7 +16,7 @@ grep "Alice" alice.txt
 grep "why" alice.txt | wc -l
 
 #6
-grep "CHAPTER" alice.txt | cut -d' ' -f3-  
+grep "CHAPTER" alice.txt | cut -d' ' -f3- > chapters.txt
 
 #7
 grep "fear" alice.txt | sed "s/e/o/g"
@@ -28,5 +28,5 @@ grep "Alice" alice.txt | cat -n > numbered_alice.txt
 grep -vE "fear|rabbit" alice.txt
 
 #10
-grep '*' alice.txt | uniq
+grep '*' alice.txt | sort | uniq
 

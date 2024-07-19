@@ -2,8 +2,8 @@
 
 
 #1
-#pv alice.txt > /dev/null
-echo "pv alice.txt > /dev/null speed is 15.6MiB/s it means that the computer is transfering 15.6 mega byte per second"
+#pv /dev/zero > /dev/null
+echo "pv /dev/zero > /dev/null speed is 15.6MiB/s it means that the computer is transfering 15.6 mega byte per second"
 
 #2
 #pv /dev/zero > /dev/null
@@ -18,8 +18,8 @@ echo "pv /dev/random > /dev/null speed is 242MiB/s it means that the computer is
 echo "pv /dev/urandom > /dev/null speed is 255MiB/s it means that the computer is transfering 255 mega byte per second"
 
 #5
-# 1Gb=125MB
-dd if=/dev/zero of=bigfile.txt bs=1M count=125 
+# 1Gb=1000MB
+dd if=/dev/zero of=bigfile.txt bs=1M count=1000
 
 #6
 pv bigfile > /tmp/bigfile.txt

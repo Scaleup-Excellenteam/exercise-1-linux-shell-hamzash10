@@ -33,4 +33,4 @@ cd ..
 cd ~
 
 #9 
-rm -r new
+rm -rf new
